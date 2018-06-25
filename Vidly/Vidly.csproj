@@ -241,6 +241,54 @@
     <Compile Include="Migrations\201806212144051_AddOtherMembershipTypeNames.Designer.cs">
       <DependentUpon>201806212144051_AddOtherMembershipTypeNames.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806221840448_JoinMembershipTypeAndCustomerTables.cs" />
+    <Compile Include="Migrations\201806221840448_JoinMembershipTypeAndCustomerTables.Designer.cs">
+      <DependentUpon>201806221840448_JoinMembershipTypeAndCustomerTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806221906016_AddBirthdateColumn.cs" />
+    <Compile Include="Migrations\201806221906016_AddBirthdateColumn.Designer.cs">
+      <DependentUpon>201806221906016_AddBirthdateColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806221915368_GiveJohnABirthday.cs" />
+    <Compile Include="Migrations\201806221915368_GiveJohnABirthday.Designer.cs">
+      <DependentUpon>201806221915368_GiveJohnABirthday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806221943477_AddBirthdateFieldToClass.cs" />
+    <Compile Include="Migrations\201806221943477_AddBirthdateFieldToClass.Designer.cs">
+      <DependentUpon>201806221943477_AddBirthdateFieldToClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806222018467_TryJoin.cs" />
+    <Compile Include="Migrations\201806222018467_TryJoin.Designer.cs">
+      <DependentUpon>201806222018467_TryJoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806222046563_AddMovieFieldsAndPopulateData.cs" />
+    <Compile Include="Migrations\201806222046563_AddMovieFieldsAndPopulateData.Designer.cs">
+      <DependentUpon>201806222046563_AddMovieFieldsAndPopulateData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806222118183_UpdateMoviesTable.cs" />
+    <Compile Include="Migrations\201806222118183_UpdateMoviesTable.Designer.cs">
+      <DependentUpon>201806222118183_UpdateMoviesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806222121377_Something.cs" />
+    <Compile Include="Migrations\201806222121377_Something.Designer.cs">
+      <DependentUpon>201806222121377_Something.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806222132365_PopulateMovieData.cs" />
+    <Compile Include="Migrations\201806222132365_PopulateMovieData.Designer.cs">
+      <DependentUpon>201806222132365_PopulateMovieData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806251504340_mig1.cs" />
+    <Compile Include="Migrations\201806251504340_mig1.Designer.cs">
+      <DependentUpon>201806251504340_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806251505198_PopulateMovieData1.cs" />
+    <Compile Include="Migrations\201806251505198_PopulateMovieData1.Designer.cs">
+      <DependentUpon>201806251505198_PopulateMovieData1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806251509105_DeleteExtraRows.cs" />
+    <Compile Include="Migrations\201806251509105_DeleteExtraRows.Designer.cs">
+      <DependentUpon>201806251509105_DeleteExtraRows.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -318,6 +366,8 @@
     <Content Include="Views\Shared\_Navbar.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -366,6 +416,42 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806212144051_AddOtherMembershipTypeNames.resx">
       <DependentUpon>201806212144051_AddOtherMembershipTypeNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806221840448_JoinMembershipTypeAndCustomerTables.resx">
+      <DependentUpon>201806221840448_JoinMembershipTypeAndCustomerTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806221906016_AddBirthdateColumn.resx">
+      <DependentUpon>201806221906016_AddBirthdateColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806221915368_GiveJohnABirthday.resx">
+      <DependentUpon>201806221915368_GiveJohnABirthday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806221943477_AddBirthdateFieldToClass.resx">
+      <DependentUpon>201806221943477_AddBirthdateFieldToClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806222018467_TryJoin.resx">
+      <DependentUpon>201806222018467_TryJoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806222046563_AddMovieFieldsAndPopulateData.resx">
+      <DependentUpon>201806222046563_AddMovieFieldsAndPopulateData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806222118183_UpdateMoviesTable.resx">
+      <DependentUpon>201806222118183_UpdateMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806222121377_Something.resx">
+      <DependentUpon>201806222121377_Something.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806222132365_PopulateMovieData.resx">
+      <DependentUpon>201806222132365_PopulateMovieData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806251504340_mig1.resx">
+      <DependentUpon>201806251504340_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806251505198_PopulateMovieData1.resx">
+      <DependentUpon>201806251505198_PopulateMovieData1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806251509105_DeleteExtraRows.resx">
+      <DependentUpon>201806251509105_DeleteExtraRows.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

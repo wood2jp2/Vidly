@@ -5,11 +5,58 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+        //public ActionResult Index(int? pageIndex, string sortBy)
+        //{
+        //    if (!pageIndex.HasValue)
+        //    {
+        //        pageIndex = 1;
+        //    }
+
+        //    if (String.IsNullOrWhiteSpace(sortBy))
+        //    {
+        //        sortBy = "Name";
+        //    }
+
+        //    return Content(String.Format("pageIndex: {0}, sortBy: {1}", pageIndex, sortBy));
+        //}
+
+        private ApplicationDbContext _context;
+
+        public MoviesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
+        public ActionResult Index()
+        {
+
+            var movies = _context.Movies;
+            return View(movies);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
+            if (movie == null)
+            {
+                return HttpNotFound();
+            } else
+            {
+                return View(movie);
+            }
+        }
+
         public ActionResult ByReleaseDate(int year, int month)
         {
             return Content(string.Format("{0}/{1}", month, year));
@@ -43,25 +90,7 @@ namespace Vidly.Controllers
             return Content(string.Format("id: {0}", id));
         }
 
-        public ActionResult Index(int? pageIndex, string sortBy)
-        {
-            if (!pageIndex.HasValue)
-            {
-                pageIndex = 1;
-            }
 
-            if (String.IsNullOrWhiteSpace(sortBy))
-            {
-                sortBy = "Name";
-            }
-
-            return Content(String.Format("pageIndex: {0}, sortBy: {1}", pageIndex, sortBy));
-        }
-
-        public ActionResult Hello() // 'Hello' would be in this case what is returned when '/Movies/Hello' is hit
-        {
-            return Content(string.Format("Hello, my name is {0}", "Josh"));
-        }
 
     }
 }
