@@ -289,6 +289,10 @@
     <Compile Include="Migrations\201806251509105_DeleteExtraRows.Designer.cs">
       <DependentUpon>201806251509105_DeleteExtraRows.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806251821506_UpdateReleaseDates.cs" />
+    <Compile Include="Migrations\201806251821506_UpdateReleaseDates.Designer.cs">
+      <DependentUpon>201806251821506_UpdateReleaseDates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -452,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806251509105_DeleteExtraRows.resx">
       <DependentUpon>201806251509105_DeleteExtraRows.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806251821506_UpdateReleaseDates.resx">
+      <DependentUpon>201806251821506_UpdateReleaseDates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
