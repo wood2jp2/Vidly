@@ -293,9 +293,98 @@
     <Compile Include="Migrations\201806251821506_UpdateReleaseDates.Designer.cs">
       <DependentUpon>201806251821506_UpdateReleaseDates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806261453561_ChangeCustomerBirthdateType.cs" />
+    <Compile Include="Migrations\201806261453561_ChangeCustomerBirthdateType.Designer.cs">
+      <DependentUpon>201806261453561_ChangeCustomerBirthdateType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806261500373_ChangeBirthdateType2.cs" />
+    <Compile Include="Migrations\201806261500373_ChangeBirthdateType2.Designer.cs">
+      <DependentUpon>201806261500373_ChangeBirthdateType2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806261519422_ChangeBirthdateType3.cs" />
+    <Compile Include="Migrations\201806261519422_ChangeBirthdateType3.Designer.cs">
+      <DependentUpon>201806261519422_ChangeBirthdateType3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806261522292_ChangeBirthdateType31.cs" />
+    <Compile Include="Migrations\201806261522292_ChangeBirthdateType31.Designer.cs">
+      <DependentUpon>201806261522292_ChangeBirthdateType31.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806261529078_ChangeBirthdateType4.cs" />
+    <Compile Include="Migrations\201806261529078_ChangeBirthdateType4.Designer.cs">
+      <DependentUpon>201806261529078_ChangeBirthdateType4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806261531361_ChangeBirthdateType5.cs" />
+    <Compile Include="Migrations\201806261531361_ChangeBirthdateType5.Designer.cs">
+      <DependentUpon>201806261531361_ChangeBirthdateType5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806261533039_ChangeBirthdateType51.cs" />
+    <Compile Include="Migrations\201806261533039_ChangeBirthdateType51.Designer.cs">
+      <DependentUpon>201806261533039_ChangeBirthdateType51.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806261605425_sdfasdf.cs" />
+    <Compile Include="Migrations\201806261605425_sdfasdf.Designer.cs">
+      <DependentUpon>201806261605425_sdfasdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806261608143_TryDateAgain.cs" />
+    <Compile Include="Migrations\201806261608143_TryDateAgain.Designer.cs">
+      <DependentUpon>201806261608143_TryDateAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806261611200_TryDateAgain1.cs" />
+    <Compile Include="Migrations\201806261611200_TryDateAgain1.Designer.cs">
+      <DependentUpon>201806261611200_TryDateAgain1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806271359577_AddGenreFieldsToMovieTable.cs" />
+    <Compile Include="Migrations\201806271359577_AddGenreFieldsToMovieTable.Designer.cs">
+      <DependentUpon>201806271359577_AddGenreFieldsToMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806271404238_PopulateGenresTable.cs" />
+    <Compile Include="Migrations\201806271404238_PopulateGenresTable.Designer.cs">
+      <DependentUpon>201806271404238_PopulateGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806271411314_DropRedundantGenreIdAndPopulate.cs" />
+    <Compile Include="Migrations\201806271411314_DropRedundantGenreIdAndPopulate.Designer.cs">
+      <DependentUpon>201806271411314_DropRedundantGenreIdAndPopulate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806281444183_DropGenreIdColumn.cs" />
+    <Compile Include="Migrations\201806281444183_DropGenreIdColumn.Designer.cs">
+      <DependentUpon>201806281444183_DropGenreIdColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806281456116_DropGenreId.cs" />
+    <Compile Include="Migrations\201806281456116_DropGenreId.Designer.cs">
+      <DependentUpon>201806281456116_DropGenreId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806281458522_adf.cs" />
+    <Compile Include="Migrations\201806281458522_adf.Designer.cs">
+      <DependentUpon>201806281458522_adf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806281500509_asdf.cs" />
+    <Compile Include="Migrations\201806281500509_asdf.Designer.cs">
+      <DependentUpon>201806281500509_asdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806281509057_DropEverything.cs" />
+    <Compile Include="Migrations\201806281509057_DropEverything.Designer.cs">
+      <DependentUpon>201806281509057_DropEverything.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806281519420_AddEverythingAgain.cs" />
+    <Compile Include="Migrations\201806281519420_AddEverythingAgain.Designer.cs">
+      <DependentUpon>201806281519420_AddEverythingAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806281600083_AddEverythingAgain_Ryan.cs" />
+    <Compile Include="Migrations\201806281600083_AddEverythingAgain_Ryan.Designer.cs">
+      <DependentUpon>201806281600083_AddEverythingAgain_Ryan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806281624525_AddGenreForeignKey.cs" />
+    <Compile Include="Migrations\201806281624525_AddGenreForeignKey.Designer.cs">
+      <DependentUpon>201806281624525_AddGenreForeignKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806281711087_MovieModelGenreUpdate.cs" />
+    <Compile Include="Migrations\201806281711087_MovieModelGenreUpdate.Designer.cs">
+      <DependentUpon>201806281711087_MovieModelGenreUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -305,6 +394,7 @@
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\NewCustomerViewModel.cs" />
+    <Compile Include="ViewModels\NewMovieViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -373,11 +463,11 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
-    <Content Include="Views\Customers\New.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\CustomerViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -461,6 +551,72 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806251821506_UpdateReleaseDates.resx">
       <DependentUpon>201806251821506_UpdateReleaseDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806261453561_ChangeCustomerBirthdateType.resx">
+      <DependentUpon>201806261453561_ChangeCustomerBirthdateType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806261500373_ChangeBirthdateType2.resx">
+      <DependentUpon>201806261500373_ChangeBirthdateType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806261519422_ChangeBirthdateType3.resx">
+      <DependentUpon>201806261519422_ChangeBirthdateType3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806261522292_ChangeBirthdateType31.resx">
+      <DependentUpon>201806261522292_ChangeBirthdateType31.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806261529078_ChangeBirthdateType4.resx">
+      <DependentUpon>201806261529078_ChangeBirthdateType4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806261531361_ChangeBirthdateType5.resx">
+      <DependentUpon>201806261531361_ChangeBirthdateType5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806261533039_ChangeBirthdateType51.resx">
+      <DependentUpon>201806261533039_ChangeBirthdateType51.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806261605425_sdfasdf.resx">
+      <DependentUpon>201806261605425_sdfasdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806261608143_TryDateAgain.resx">
+      <DependentUpon>201806261608143_TryDateAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806261611200_TryDateAgain1.resx">
+      <DependentUpon>201806261611200_TryDateAgain1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806271359577_AddGenreFieldsToMovieTable.resx">
+      <DependentUpon>201806271359577_AddGenreFieldsToMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806271404238_PopulateGenresTable.resx">
+      <DependentUpon>201806271404238_PopulateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806271411314_DropRedundantGenreIdAndPopulate.resx">
+      <DependentUpon>201806271411314_DropRedundantGenreIdAndPopulate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806281444183_DropGenreIdColumn.resx">
+      <DependentUpon>201806281444183_DropGenreIdColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806281456116_DropGenreId.resx">
+      <DependentUpon>201806281456116_DropGenreId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806281458522_adf.resx">
+      <DependentUpon>201806281458522_adf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806281500509_asdf.resx">
+      <DependentUpon>201806281500509_asdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806281509057_DropEverything.resx">
+      <DependentUpon>201806281509057_DropEverything.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806281519420_AddEverythingAgain.resx">
+      <DependentUpon>201806281519420_AddEverythingAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806281600083_AddEverythingAgain_Ryan.resx">
+      <DependentUpon>201806281600083_AddEverythingAgain_Ryan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806281624525_AddGenreForeignKey.resx">
+      <DependentUpon>201806281624525_AddGenreForeignKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806281711087_MovieModelGenreUpdate.resx">
+      <DependentUpon>201806281711087_MovieModelGenreUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
