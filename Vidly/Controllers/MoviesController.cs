@@ -42,12 +42,51 @@ namespace Vidly.Controllers
             }
         }
 
+        public ActionResult New()
+        {
+            var genreNames = _context.Genres.ToList();
+            var viewModel = new NewMovieViewModel
+            {
+                Genres = genreNames
+            };
+
+            return View("NewMovieForm", viewModel);
+        }
+
+        public ActionResult Edit(int id)
+        {
+             var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
+
+                if (movie == null)
+                {
+                    return HttpNotFound();
+                }
+
+                var viewModel = new NewMovieViewModel
+                {
+                    Movie = movie,
+                    Genres = _context.Genres.ToList()
+                };
+
+            return View("EditMovie", viewModel);
+        }
+
         [HttpPost]
-        public ActionResult New(Movie movie)
+        public ActionResult Save(Movie movie)
         {
             if (movie.Id == 0)
             {
                 _context.Movies.Add(movie);
+            }
+            else
+            {
+                var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
+
+                movieInDb.Name = movie.Name;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+                movieInDb.Genre = movie.Genre;
+                movieInDb.NumberInStock = movie.NumberInStock;
+                Console.WriteLine(movieInDb);
             }
 
             _context.SaveChanges();
@@ -83,10 +122,10 @@ namespace Vidly.Controllers
 
         }
 
-        public ActionResult Edit(int id)
-        {
-            return Content(string.Format("id: {0}", id));
-        }
+        //public ActionResult Edit(int id)
+        //{
+        //    return Content(string.Format("id: {0}", id));
+        //}
 
 
 

@@ -1,7 +1,7 @@
 ﻿@model Vidly.ViewModels.NewMovieViewModel
 
 @{
-    ViewBag.Title = "MovieForm";
+    ViewBag.Title = "NewMovieForm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -21,16 +21,8 @@
 
     <div class="form-group">
         @Html.LabelFor(m => m.Movie.Genre)
-       @*@Html.DropDownListFor(m => m.Movie.Genre,
-        new SelectList(
-            new List<Object>{
-                 new { value = 0, text= "Action" },
-                 new { value = 1, text ="Thriller" },
-                 new {value = 2, text="Family" },
-                 new {value = 3, text = "Romance" },
-                 new {value = 4, text = "Comedy" } }
-                 , "value", "text", Model.Movie.Genre))*@
-        @*@Html.DropDownListFor(m => m.movie.Genre, new SelectList("Action", "Thriller", "Family", "Romance", "Comedy"), "Select Genre", new { @class = "form-control" })*@
+        @Html.DropDownListFor(m => m.Movie.Genre, new SelectList(Model.Genres, "Id", "Name"), "Select Genre", new { @class = "form-control" })
+
     </div>
 
     <div class="form-group">
