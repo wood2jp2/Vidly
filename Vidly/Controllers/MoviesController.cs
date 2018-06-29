@@ -76,6 +76,8 @@ namespace Vidly.Controllers
         {
             if (movie.Id == 0)
             {
+                var dateAdded = DateTime.Now;
+                movie.DateAdded = dateAdded;
                 _context.Movies.Add(movie);
             }
             else
@@ -84,13 +86,13 @@ namespace Vidly.Controllers
 
                 movieInDb.Name = movie.Name;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
-                movieInDb.Genre = movie.Genre;
+                movieInDb.GenreId = movie.GenreId;
                 movieInDb.NumberInStock = movie.NumberInStock;
-                Console.WriteLine(movieInDb);
             }
 
             _context.SaveChanges();
-
+            // submitting a new movie is showing up as Genre = null and throwing exception
+            // GenreId is correct, however
             return RedirectToAction("Index", "Movies");
         }
 

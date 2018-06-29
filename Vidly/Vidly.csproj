@@ -381,6 +381,18 @@
     <Compile Include="Migrations\201806281711087_MovieModelGenreUpdate.Designer.cs">
       <DependentUpon>201806281711087_MovieModelGenreUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806291437343_FixingGenreIdField.cs" />
+    <Compile Include="Migrations\201806291437343_FixingGenreIdField.Designer.cs">
+      <DependentUpon>201806291437343_FixingGenreIdField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806291528415_UnrequireGenre.cs" />
+    <Compile Include="Migrations\201806291528415_UnrequireGenre.Designer.cs">
+      <DependentUpon>201806291528415_UnrequireGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806291535113_UnrequireGenreFromGenreTable.cs" />
+    <Compile Include="Migrations\201806291535113_UnrequireGenreFromGenreTable.Designer.cs">
+      <DependentUpon>201806291535113_UnrequireGenreFromGenreTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -617,6 +629,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806281711087_MovieModelGenreUpdate.resx">
       <DependentUpon>201806281711087_MovieModelGenreUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806291437343_FixingGenreIdField.resx">
+      <DependentUpon>201806291437343_FixingGenreIdField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806291528415_UnrequireGenre.resx">
+      <DependentUpon>201806291528415_UnrequireGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806291535113_UnrequireGenreFromGenreTable.resx">
+      <DependentUpon>201806291535113_UnrequireGenreFromGenreTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
