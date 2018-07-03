@@ -10,9 +10,11 @@ namespace Vidly.Models
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
+            // Casting customer validation information to an instance of the Customer object
             var customer = (Customer)validationContext.ObjectInstance;
 
-            if (customer.MembershipTypeId == 0 || customer.MembershipTypeId == 1)
+            // if there is no membership type selected or it is Pay as you go
+            if (customer.MembershipTypeId == MembershipType.Unknown || customer.MembershipTypeId == MembershipType.PayAsYouGo)
             {
                 return ValidationResult.Success;
             }
@@ -22,6 +24,7 @@ namespace Vidly.Models
                 return new ValidationResult("Birthdate is required.");
             }
 
+            // checking to see if age will be 18
             var age = DateTime.Today.Year - customer.Birthdate.Value.Year;
 
             return (age >= 18) ? 

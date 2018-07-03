@@ -14,6 +14,7 @@ namespace Vidly.Controllers
 
         private ApplicationDbContext _context;
 
+        // Initializes database / entity context
         public CustomersController()
         {
             _context = new ApplicationDbContext();
@@ -29,9 +30,11 @@ namespace Vidly.Controllers
             var membershipTypes = _context.MembershipTypes.ToList();
             var viewModel = new CustomerFormViewModel
             {
+                Customer = new Customer(),
                 MembershipTypes = membershipTypes
             };
 
+            // You can explicitly pass down values to Viewbag to use based on action / input
             ViewBag.FormType = "New";
 
             return View("CustomerForm", viewModel);
