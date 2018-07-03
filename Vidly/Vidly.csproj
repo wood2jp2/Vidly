@@ -393,6 +393,10 @@
     <Compile Include="Migrations\201806291535113_UnrequireGenreFromGenreTable.Designer.cs">
       <DependentUpon>201806291535113_UnrequireGenreFromGenreTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807031513439_ChangeCustomerBirthdateToDateTime.cs" />
+    <Compile Include="Migrations\201807031513439_ChangeCustomerBirthdateToDateTime.Designer.cs">
+      <DependentUpon>201807031513439_ChangeCustomerBirthdateToDateTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -400,6 +404,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -638,6 +643,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806291535113_UnrequireGenreFromGenreTable.resx">
       <DependentUpon>201806291535113_UnrequireGenreFromGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807031513439_ChangeCustomerBirthdateToDateTime.resx">
+      <DependentUpon>201807031513439_ChangeCustomerBirthdateToDateTime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

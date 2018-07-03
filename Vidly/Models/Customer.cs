@@ -20,7 +20,8 @@ namespace Vidly.Models
         public MembershipType MembershipType { get; set; }
 
         [Display (Name = "Date of Birth")]
-        public string Birthdate { get; set; }
+        [Min18YearsIfAMember]
+        public DateTime? Birthdate { get; set; }
 
         [Display( Name = "Membership Type")]
         [Required(ErrorMessage ="Please select a membership type from the dropdown list.")]

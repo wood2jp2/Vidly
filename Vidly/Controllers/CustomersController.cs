@@ -31,6 +31,9 @@ namespace Vidly.Controllers
             {
                 MembershipTypes = membershipTypes
             };
+
+            ViewBag.FormType = "New";
+
             return View("CustomerForm", viewModel);
         }
 
@@ -82,6 +85,8 @@ namespace Vidly.Controllers
                 MembershipTypes = _context.MembershipTypes.ToList()
             };
 
+            ViewBag.FormType = "Edit";
+
             return View("CustomerForm", viewModel);
         }
 
@@ -109,14 +114,5 @@ namespace Vidly.Controllers
             
 
         }
-
-        //private IEnumerable<Customer> GetCustomers()
-        //{
-        //    return new List<Customer>
-        //    {
-        //        new Customer {Id = 1, Name = "John Smith"},
-        //        new Customer { Id = 2, Name = "Mary Williams"}
-        //    };
-        //}
     }
 }
