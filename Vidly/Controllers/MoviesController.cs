@@ -47,8 +47,11 @@ namespace Vidly.Controllers
             var genreNames = _context.Genres.ToList();
             var viewModel = new NewMovieViewModel
             {
+                Movie = new Movie(),
                 Genres = genreNames
             };
+
+            ViewBag.FormType = "New";
 
             return View("NewMovieForm", viewModel);
         }
@@ -68,16 +71,33 @@ namespace Vidly.Controllers
                     Genres = _context.Genres.ToList()
                 };
 
+            ViewBag.FormType = "Edit";
+
             return View("EditMovie", viewModel);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
+
+            Console.WriteLine(movie);
+
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new NewMovieViewModel
+                {
+                    Movie = movie,
+                    Genres = _context.Genres.ToList()
+                };
+
+                return View("NewMovieForm", viewModel);
+            }
+
             if (movie.Id == 0)
             {
-                var dateAdded = DateTime.Now;
-                movie.DateAdded = dateAdded;
+                DateTime now = DateTime.Today;
+                movie.DateAdded = now;
                 _context.Movies.Add(movie);
             }
             else
@@ -91,8 +111,7 @@ namespace Vidly.Controllers
             }
 
             _context.SaveChanges();
-            // submitting a new movie is showing up as Genre = null and throwing exception
-            // GenreId is correct, however
+
             return RedirectToAction("Index", "Movies");
         }
 
