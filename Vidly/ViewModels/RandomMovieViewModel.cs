@@ -9,6 +9,5 @@ namespace Vidly.ViewModels
     public class RandomMovieViewModel
     {
         public Movie Movie { get; set; }
-        
     }
 }

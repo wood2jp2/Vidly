@@ -411,7 +411,7 @@
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
-    <Compile Include="ViewModels\NewMovieViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
