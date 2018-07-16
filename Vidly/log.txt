@@ -1,0 +1,7 @@
+Username: Anonymous made aGET request to http://localhost:51292/ on 7/16/2018 3:59:43 PM. Session set to expire 7/16/2018 4:09:43 PM
+Username: test@test.com made aGET request to http://localhost:51292/ on 7/16/2018 4:04:03 PM. Session set to expire 7/16/2018 4:14:03 PM
+Username: test@test.com made aGET request to http://localhost:51292/Movies on 7/16/2018 4:04:05 PM. Session set to expire 7/16/2018 4:14:05 PM
+Username: test@test.com made aGET request to http://localhost:51292/Movies/New on 7/16/2018 4:04:12 PM. Session set to expire 7/16/2018 4:14:12 PM
+Username: test@test.com made aPOST request to http://localhost:51292/Movies/Save on 7/16/2018 4:04:34 PM. Session set to expire 7/16/2018 4:14:34 PM
+Username: test@test.com made aGET request to http://localhost:51292/Movies on 7/16/2018 4:04:34 PM. Session set to expire 7/16/2018 4:14:34 PM
+Username: Anonymous made aGET request to http://localhost:51292/ on 7/16/2018 4:25:18 PM. Session set to expire 7/16/2018 4:35:18 PM

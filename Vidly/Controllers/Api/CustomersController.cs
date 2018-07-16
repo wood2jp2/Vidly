@@ -7,12 +7,15 @@ using System.Web.Http;
 using Vidly.Models;
 using Vidly.Dtos;
 using AutoMapper;
+using Vidly.ActionFilters;
 
 namespace Vidly.Controllers.Api
 {
-
+    [Authorize]
+    [MyActionFilter]
     public class CustomersController : ApiController
     {
+
         private ApplicationDbContext _context;
 
         public CustomersController()

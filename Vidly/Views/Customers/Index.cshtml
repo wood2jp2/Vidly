@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Vidly.Models.Customer>
 
 @{
-    ViewBag.Title = "Customers";
+    ViewBag.Title = "Custrs";
 }
 
 <h2>@ViewBag.Title</h2>
@@ -39,7 +39,10 @@ else
 {
     <script>
         $(document).ready(function () {
-            $("#customers .js-delete").on("click", function () {
+            // throwing .js-delete as a second filter argument only tacks on ONE function for the whole customer
+            // row, instead of a function per row. Optimizes code.
+
+            $("#customers").on("click", ".js-delete",function () {
                 let button = $(this)
                 bootbox.confirm("Are you sure you'd like to delete this customer?", function (result) {
                     if (result) {

@@ -6,9 +6,11 @@ using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
 using System.Data.Entity;
+using Vidly.ActionFilters;
 
 namespace Vidly.Controllers
 {
+    [MyActionFilter]
     public class MoviesController : Controller
     {
 
