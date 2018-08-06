@@ -5,3 +5,18 @@ Username: test@test.com made aGET request to http://localhost:51292/Movies/New o
 Username: test@test.com made aPOST request to http://localhost:51292/Movies/Save on 7/16/2018 4:04:34 PM. Session set to expire 7/16/2018 4:14:34 PM
 Username: test@test.com made aGET request to http://localhost:51292/Movies on 7/16/2018 4:04:34 PM. Session set to expire 7/16/2018 4:14:34 PM
 Username: Anonymous made aGET request to http://localhost:51292/ on 7/16/2018 4:25:18 PM. Session set to expire 7/16/2018 4:35:18 PM
+Username: Anonymous made aGET request to http://localhost:51292/ on 7/17/2018 9:30:24 AM. Session set to expire 7/17/2018 9:40:24 AM
+Username: test@test.com made aGET request to http://localhost:51292/ on 7/17/2018 9:31:47 AM. Session set to expire 7/17/2018 9:41:47 AM
+Username: Anonymous made aGET request to http://localhost:51292/ on 7/17/2018 9:49:29 AM. Session set to expire 7/17/2018 9:59:29 AM
+Username: test@test.com made aGET request to http://localhost:51292/ on 7/17/2018 9:50:13 AM. Session set to expire 7/17/2018 10:00:13 AM
+Username: Anonymous made aGET request to http://localhost:51292/ on 7/17/2018 9:59:08 AM. Session set to expire 7/17/2018 10:00:08 AM
+Username: test@test.com made aGET request to http://localhost:51292/ on 7/17/2018 10:00:49 AM. Session set to expire 7/17/2018 10:01:49 AM
+Username: test@test.com made aGET request to http://localhost:51292/ on 7/17/2018 10:26:34 AM. Session set to expire 7/17/2018 10:27:34 AM
+Username: Anonymous made aGET request to http://localhost:51292/ on 7/17/2018 10:34:48 AM. Session set to expire 10:35:48 AM
+Username: test@test.com made aGET request to http://localhost:51292/ on 7/17/2018 10:35:40 AM. Session set to expire 10:36:40 AM
+Username: Anonymous made aGET request to http://localhost:51292/ on 7/17/2018 10:39:35 AM. Session set to expire 10:40:35 AM
+Username: test@test.com made aGET request to http://localhost:51292/ on 7/17/2018 10:40:03 AM. Session set to expire 10:41:03 AM
+Username: Anonymous made aGET request to http://localhost:51292/ on 7/17/2018 10:48:14 AM. Session set to expire 10:49:14 AM
+Username: test@test.com made aGET request to http://localhost:51292/ on 7/17/2018 10:48:44 AM. Session set to expire 10:49:44 AM
+Username: Anonymous made aGET request to http://localhost:51292/ on 7/17/2018 10:50:53 AM. Session set to expire 10:51:53 AM
+Username: test@test.com made aGET request to http://localhost:51292/ on 7/17/2018 10:51:22 AM. Session set to expire 10:52:22 AM

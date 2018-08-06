@@ -5,6 +5,8 @@ using System.Web;
 using System.Diagnostics;
 using System.Web.Mvc;
 using Vidly.ActionFilters;
+using System.Web.SessionState;
+using System.IO;
 
 namespace Vidly.Controllers
 {
@@ -14,7 +16,18 @@ namespace Vidly.Controllers
         public ActionResult Index()
         {
             Debug.WriteLine(HttpContext.Items["user"]);
-            //Debug.WriteLine("CURRENT SESSION: " + System.Web.HttpContext.Current.Session);
+            var sessionExpiryTime = HttpContext.Items["expiryTime"];
+            if (Request.IsAuthenticated)
+            {
+                Debug.WriteLine("There is an authenticated user: " +  HttpContext.Items["user"] + " with a session expiration of " + sessionExpiryTime);
+            } else
+            {
+                Debug.WriteLine("there is NOT an authenticated user");
+            }
+
+            ViewBag.sessionExpiryTime = sessionExpiryTime;
+            System.Web.HttpContext.Current.Session.Timeout = 1;
+            
             return View();
         }
 

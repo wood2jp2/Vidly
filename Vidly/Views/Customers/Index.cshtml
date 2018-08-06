@@ -1,48 +1,54 @@
 ﻿@model IEnumerable<Vidly.Models.Customer>
 
 @{
-    ViewBag.Title = "Custrs";
+    ViewBag.Title = "Customers";
 }
 
 <h2>@ViewBag.Title</h2>
 
-@if (!Model.Any())
-{
-    <p>We don't have any customers yet</p>
-}
-else
-{
-    <table id="customers" class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>Customer</th>
-                <th>Membership Type</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var customer in Model)
-            {
-                <tr>
-                    <td>@Html.ActionLink(customer.Name, "Edit", "Customers", new { id = customer.Id }, null)</td>
-                    <td>@customer.MembershipType.Name</td>
-                    <td>
-                        <button data-customer-id="@customer.Id" class="btn-link js-delete">Delete</button>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+<table id="customers" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Membership Type</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
 
 @section scripts
 {
     <script>
         $(document).ready(function () {
+
+            $("#customers").DataTable({
+                ajax: {
+                    url: "/api/customers",
+                    dataSrc: "" // plain string because our data source is an unnamed array of objects
+                },
+                columns: [
+                    {
+                        data: "name", // what field the column is deriving it's value for for each row
+                        render: function (data, type, customer) {
+                            return "<a href='/customers/edit/" + customer.id + "'>" + customer.name + "</a>"
+                        } // custom render function to render the anchor tags and data
+                    },
+                    {
+                        data: "name"
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button class='btn-link js-delete' data-customer-id=" + data + ">Delete</button>"
+                        }
+                    }
+                ]
+            });
             // throwing .js-delete as a second filter argument only tacks on ONE function for the whole customer
             // row, instead of a function per row. Optimizes code.
 
-            $("#customers").on("click", ".js-delete",function () {
+            $("#customers").on("click", ".js-delete", function () {
                 let button = $(this)
                 bootbox.confirm("Are you sure you'd like to delete this customer?", function (result) {
                     if (result) {

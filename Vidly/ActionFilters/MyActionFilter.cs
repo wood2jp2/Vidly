@@ -11,17 +11,23 @@ namespace Vidly.ActionFilters
 {
     public class MyActionFilter : ActionFilterAttribute,IActionFilter
     {
-        public override void OnActionExecuted(ActionExecutedContext filterContext)
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            StreamWriter obj = new StreamWriter(filterContext.HttpContext.Server.MapPath("~/log.txt"), true);
+
             var currentUser = !String.IsNullOrWhiteSpace(filterContext.HttpContext.User.Identity.Name) ? filterContext.HttpContext.User.Identity.Name : "Anonymous";
             var requestToUrl = filterContext.HttpContext.Request.Url;
             var requestType = filterContext.HttpContext.Request.RequestType;
-            var currentSessionTimeout = DateTime.Now.AddMinutes(10).ToLocalTime();
+            var currentSessionTimeout = DateTime.Now.AddMinutes(1).ToLongTimeString();
+
             filterContext.HttpContext.Items["user"] = currentUser;
-            obj.Write("Username: " + currentUser + " made a" + requestType + " request to " + requestToUrl + " on " + DateTime.Now + ". Session set to expire " + currentSessionTimeout + Environment.NewLine);
-            obj.Close();
-            base.OnActionExecuted(filterContext);
+            filterContext.HttpContext.Items["expiryTime"] = currentSessionTimeout;
+
+            base.OnActionExecuting(filterContext);
+
+            //StreamWriter obj = new StreamWriter(filterContext.HttpContext.Server.MapPath("~/log.txt"), true);
+            //obj.Write("Username: " + currentUser + " made a" + requestType + " request to " + requestToUrl + " on " + DateTime.Now + ". Session set to expire " + currentSessionTimeout + Environment.NewLine);
+            //obj.Close();
+
         }
     }
 }
