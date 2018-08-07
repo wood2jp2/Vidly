@@ -216,6 +216,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Dtos\CustomerDto.cs" />
+    <Compile Include="Dtos\GenreDto.cs" />
+    <Compile Include="Dtos\MembershipTypeDto.cs" />
     <Compile Include="Dtos\MovieDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -415,6 +417,10 @@
     <Compile Include="Migrations\201807031513439_ChangeCustomerBirthdateToDateTime.cs" />
     <Compile Include="Migrations\201807031513439_ChangeCustomerBirthdateToDateTime.Designer.cs">
       <DependentUpon>201807031513439_ChangeCustomerBirthdateToDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808071726085_SeedUsers.cs" />
+    <Compile Include="Migrations\201808071726085_SeedUsers.Designer.cs">
+      <DependentUpon>201808071726085_SeedUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -671,10 +677,11 @@
     <Content Include="Views\Shared\_Navbar.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
-    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\List.cshtml" />
     <Content Include="Views\Movies\EditMovie.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
     <Content Include="Views\Movies\NewMovieForm.cshtml" />
+    <Content Include="Views\Movies\ReadOnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -839,6 +846,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807031513439_ChangeCustomerBirthdateToDateTime.resx">
       <DependentUpon>201807031513439_ChangeCustomerBirthdateToDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808071726085_SeedUsers.resx">
+      <DependentUpon>201808071726085_SeedUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

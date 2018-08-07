@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace Vidly.Dtos
 {
     public class MovieDto
@@ -24,5 +25,7 @@ namespace Vidly.Dtos
 
         [Range(1, 20)]
         public int NumberInStock { get; set; }
+
+        public GenreDto Genre { get; set; }
     }
 }

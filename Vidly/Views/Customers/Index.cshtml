@@ -6,6 +6,8 @@
 
 <h2>@ViewBag.Title</h2>
 
+<a href="/Customers/New" class="btn btn-default">New Customer</a>
+
 <table id="customers" class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -22,7 +24,7 @@
     <script>
         $(document).ready(function () {
 
-            $("#customers").DataTable({
+            var table = $("#customers").DataTable({
                 ajax: {
                     url: "/api/customers",
                     dataSrc: "" // plain string because our data source is an unnamed array of objects
@@ -35,7 +37,8 @@
                         } // custom render function to render the anchor tags and data
                     },
                     {
-                        data: "name"
+                        data: "membershipType.name",
+
                     },
                     {
                         data: "id",
@@ -59,7 +62,7 @@
                             },
                             success: function () {
                                 let tableRow = button.parent().parent()
-                                tableRow.remove()
+                                table.row(tableRow).remove().draw()
                                 console.log("The customer has been deleted")
                             },
                             type: 'DELETE'

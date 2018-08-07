@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Vidly.Models.Movie>
+
+@{
+    ViewBag.Title = "Movies";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<a href="/Movies/New" class="btn btn-default">New Movie</a>
+
+<table id="moviesTable" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Movie</th>
+            <th>Genre</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            var table = $("#moviesTable").DataTable({
+                ajax: {
+                    url: '/api/movies',
+                    dataSrc: ''
+                },
+                columns: [
+                    {
+                        data: "name",
+                        render: function (data, type, movie) {
+                            return "<a href=/Movies/Edit/'" + movie.id + "'>" + data + "</a>"
+                        }
+                    },
+                    {
+                        data: "genre.name"
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button class='btn-link js-delete' data-movie-id=" + data + ">Delete</button>"
+                        }
+                    }
+                ]
+            });
+
+            $("#moviesTable").on("click", ".js-delete", function () {
+                let button = $(this)
+
+                bootbox.confirm("Would you like to delete this movie?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/movies/" + button.attr("data-movie-id"),
+                            type: "DELETE",
+                            success: function () {
+                                let tableRow = button.parents("tr")
+                                table.row(tableRow).remove().draw()
+                                console.log("Movie has been deleted.")
+                            },
+                            error: function () {
+                                console.log("There is an error")
+                            }
+                        })
+                    }
+                })
+            })
+
+        })
+    </script>
+
+
+}

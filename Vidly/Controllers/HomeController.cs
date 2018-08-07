@@ -11,6 +11,7 @@ using System.IO;
 namespace Vidly.Controllers
 {
     [MyActionFilter]
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         public ActionResult Index()
